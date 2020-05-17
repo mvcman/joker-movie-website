@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker | Landing Page</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <header>
+        <a href="#"  class="logo">
+            <img src="./public/logo (1).png" alt="logo"/>
+        </a>
+        <div class="toggle">
+            <img src="./public/toggle.png" alt="toggle" />
+        </div>
+    </header> 
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>Loreum ipsum,Lorem Ipsum Is Simply Dummy Text Of The Printing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <a href="#" class="play" onclick="toggle();">
+                <img src="./public/play.png" alt="play"/> Watch Trailor
+            </a>
+            <div class="slide"></div>
+            <ul class="social">
+                <li><a href="#"><img src="./public/facebook.png" alt="facebook"/></a></li>
+                <li><a href="#"><img src="./public/twitter.png" alt="twitter"/></a></li>
+                <li><a href="#"><img src="./public/instagram.png" alt="instagram"/></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="./public/trailer.mp4" controls="true"></video>
+        <img class="close" src="./public/close.png" alt="close" onclick="toggle();" />
+    </div>
+    <script type="text/javascript">
+    function toggle(){
+        var trailer = document.querySelector('.trailer');
+        var video = document.querySelector('video');
+        console.log(trailer.classList);
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    </script>
+</body>
+</html>
